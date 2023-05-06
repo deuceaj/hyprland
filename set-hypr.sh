@@ -25,7 +25,7 @@ read -n1 -rep 'Would you like to install the packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
     yay -R --noconfirm swaylock waybar
     yay -S --noconfirm base-devel
-    yay -S --noconfirm hyprland polkit-gnome ffmpeg neovim viewnior \
+    yay -S hyprland polkit-gnome ffmpeg neovim viewnior \
     rofi pavucontrol nemo starship wl-clipboard wf-recorder     \
     swaybg grimblast-git ffmpegthumbnailer tumbler playerctl      \
     noise-suppression-for-voice alacritty visual-studio-code-bin  \
@@ -38,11 +38,11 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     ckb-next discord firefox-developer-edition foliate neofetch   \
     vlc zsh zsh-autosuggestions baobab cifs utils ncdu ntfs-3g    \
     ranger mpv tumbler youtube-dl nemo-fileroller nemo-terminal   \
-    nemo-folder-icons nemo-chdir nemo=pdf-tools steam             \
+    nemo-folder-icons nemo-chdir nemo-pdf-tools steam             \
     proton-ge-custom-bin lib32-vulkan-radeon etcher-bin glow      \
     okular obsidian bridge-utils dmidecode dnsmasq edk2-ovmf      \
-    iptables-nft libguestfs libvirt qemu-desktop qemu-full swtpm  \
-    vde2 virt-manager virt-viewer archlinux-tweak-tool-git glow   \
+    libguestfs libvirt qemu-full swtpm  \
+    virt-manager virt-viewer archlinux-tweak-tool-git glow   \
     input-remapper-git ocs-url openrazer-meta pamac-aur           \
     pcloud-drive spicetify-cli spotify spotifywm-git timeshift    \
     timeshift-autosnap tiny-media-manager ttf-ms-fonts xdg-ninja 
