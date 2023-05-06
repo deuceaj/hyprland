@@ -195,7 +195,19 @@ wmname
 ####################
 #### VirtMan    ####
 ####################
-bridge-utils dmidecode dnsmasq edk2-ovmf iptables-nft libguestfs libvirt qemu-desktop qemu-full swtpm vde2 virt-manager virt-viewer
+bridge-utils
+dmidecode
+dnsmasq
+edk2-ovmf
+iptables-nft
+libguestfs
+libvirt
+qemu-desktop
+qemu-full
+swtpm
+vde2
+virt-manager
+virt-viewer
 
  
 )
@@ -262,8 +274,28 @@ func_category() {
 func_category AUR  
 
 list=(
-archlinux-tweak-tool-git glow input-remapper-git ocs-url openrazer-meta pamac-aur pcloud-drive spicetify-cli spotify spotifywm-git timeshift timeshift-autosnap tiny-media-manager ttf-ms-fonts xdg-ninja 
-
+archlinux-tweak-tool-git 
+bsp-layout
+# cava
+github-desktop-bin
+glow
+input-remapper-git
+ocs-url
+openrazer-meta
+pamac-aur
+pcloud-drive
+picom-animations-git
+spicetify-cli
+spotify
+spotifywm-git
+# stalonetray
+timeshift
+timeshift-autosnap
+tiny-media-manager
+ttf-ms-fonts
+xdg-ninja 
+xqp
+zscroll-git
 # exo-devel 
 # libxfce4util-devel 
 # libxfce4ui-devel 
