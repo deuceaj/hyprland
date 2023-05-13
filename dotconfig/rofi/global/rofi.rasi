@@ -24,7 +24,7 @@ configuration {
 window {
     transparency: "real";
     background-color: #1917244D;
-    text-color: #6e6a86;
+    text-color: #ffffff;
     location: west;
     anchor: west;
     x-offset: 5px;
@@ -43,7 +43,7 @@ button {
     str: " ";
     font: "FantasqueSansMono Nerd Font 16";
     expand: false;
-    text-color: #6e6a86;
+    text-color: #ffffff;
     background-color: @transparent;
     vertical-align: 0.5;
     horizontal-align: 0.5;
@@ -52,7 +52,7 @@ button {
 entry {
     font: "Inter Regular 12";
     background-color: @transparent;
-    text-color: #6e6a86;
+    text-color: #ffffff;
     expand: true;
     vertical-align: 0.5;
     horizontal-align: 0;
@@ -129,7 +129,7 @@ element-text {
     expand: true;
     horizontal-align: 0;
     vertical-align: 0.5;
-    color: #6e6a86;
+    color: #ffffff;
     background-color: transparent;
 }
 
@@ -147,7 +147,7 @@ element alternate.active {
 }
 
 element selected {
-    background-color: #403d5220;
+    background-color: #403d52;
     text-color: @foreground;
 }
 

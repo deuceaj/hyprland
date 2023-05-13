@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../.tiny-media-manager/export"
+		},
+		{
+			"path": "../../.tiny-media-manager/templates"
+		},
+		{
+			"path": "../../.tiny-media-manager/commands"
+		}
+	]
+}

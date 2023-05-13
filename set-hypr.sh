@@ -20,46 +20,65 @@ else
     fi
 fi
 
+# Install ArchTweeks
+git clone https://github.com/arcolinux/arcolinux-spices
+cd ~/GitHub/arcolinux-spices/usr/share/arcolinux-spices/scripts/
+sudo ./get-the-keys-and-repos.sh
+sudo pacman -Sy
+
 ### Install all of the above pacakges ####
 read -n1 -rep 'Would you like to install the packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
     yay -R --noconfirm swaylock waybar
     yay -S --noconfirm base-devel
     yay -S hyprland polkit-gnome ffmpeg neovim viewnior \
-    rofi pavucontrol nemo starship wl-clipboard wf-recorder     \
+    rofi pavucontrol nemo wl-clipboard wf-recorder     \
     swaybg grimblast-git ffmpegthumbnailer tumbler playerctl      \
-    noise-suppression-for-voice alacritty visual-studio-code-bin  \
+    noise-suppression-for-voice kitty visual-studio-code-bin  \
     waybar-hyprland wlogout swaylock-effects sddm-git pamixer     \
     nwg-look-bin nordic-theme papirus-icon-theme dunst otf-sora   \
     ttf-nerd-fonts-symbols-common otf-firamono-nerd inter-font    \
     ttf-fantasque-nerd noto-fonts noto-fonts-emoji ttf-comfortaa  \
     ttf-jetbrains-mono-nerd ttf-icomoon-feather ttf-iosevka-nerd  \
-    adobe-source-code-pro-fonts btop partitionmanager corectrl    \
-    ckb-next discord firefox-developer-edition foliate neofetch   \
+    adobe-source-code-pro-fonts btop partitionmanager corectrl-git    \
+    ckb-next webcord firefox-developer-edition brave foliate neofetch   \
     vlc zsh zsh-autosuggestions baobab cifs utils ncdu ntfs-3g    \
     ranger mpv tumbler youtube-dl nemo-fileroller nemo-terminal   \
     nemo-folder-icons nemo-chdir nemo-pdf-tools steam             \
     proton-ge-custom-bin lib32-vulkan-radeon etcher-bin glow      \
     okular obsidian bridge-utils dmidecode dnsmasq edk2-ovmf      \
-    libguestfs libvirt qemu-full swtpm  \
+    libguestfs libvirt qemu-desktop swtpm  \
     virt-manager virt-viewer archlinux-tweak-tool-git glow   \
     input-remapper-git ocs-url openrazer-meta pamac-aur           \
     pcloud-drive spicetify-cli spotify spotifywm-git timeshift    \
-    timeshift-autosnap tiny-media-manager ttf-ms-fonts xdg-ninja 
+    timeshift-autosnap tiny-media-manager ttf-ms-fonts xdg-ninja \
+    xdg-open xdg-utils hyprpaper wev arcolinux-grub-theme-vimix-git \
+    net-tools trobrowser exa bat rofi-emoji hyprpicker gamescope \
+    vk-pro bottom 
 fi
 
 ### Copy Config Files ###
 read -n1 -rep 'Would you like to copy config files? (y,n)' CFG
 if [[ $CFG == "Y" || $CFG == "y" ]]; then
     echo -e "Copying config files...\n"
+    cp -R ./dotconfig/ckb-next ~/.config/   # my corsair keyboard layout
+    cp -R ./dotconfig/corectrl ~/.config/   # Corectrl files
+    cp -R ./dotconfig/GIMP ~/.config/   # Gimp looks like photoshop
     cp -R ./dotconfig/dunst ~/.config/
     cp -R ./dotconfig/hypr ~/.config/
+    cp -R ./dotconfig/input-remapper-2 ~/.config/   # Gamekeypad Guild Wars 2 Setting
     cp -R ./dotconfig/kitty ~/.config/
+    cp -R ./dotconfig/nvim ~/.config/
     cp -R ./dotconfig/pipewire ~/.config/
     cp -R ./dotconfig/rofi ~/.config/
     cp -R ./dotconfig/swaylock ~/.config/
     cp -R ./dotconfig/waybar ~/.config/
     cp -R ./dotconfig/wlogout ~/.config/
+    cp -R ./dotlocal/bin ~/.config/
+    cp -R ./dotlocal/wallpapers ~/.config/
+    cp -R ./dotlocal/WorksSpaces ~/.config/
+    
+
     
     # Set some files as exacutable 
     chmod +x ~/.config/hypr/xdg-portal-hyprland

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo virsh start win11
+sleep 2
+sudo virt-viewer win11

@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+echo -ne "
+-------------------------------------------------------------------------
+██╗   ██╗██████╗ ██████╗  █████╗ ████████╗███████╗    
+██║   ██║██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██╔════╝    
+██║   ██║██████╔╝██║  ██║███████║   ██║   █████╗      
+██║   ██║██╔═══╝ ██║  ██║██╔══██║   ██║   ██╔══╝      
+╚██████╔╝██║     ██████╔╝██║  ██║   ██║   ███████╗    
+ ╚═════╝ ╚═╝     ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝    
+                                                      
+███████╗███████╗████████╗ █████╗ ██████╗              
+██╔════╝██╔════╝╚══██╔══╝██╔══██╗██╔══██╗             
+█████╗  ███████╗   ██║   ███████║██████╔╝             
+██╔══╝  ╚════██║   ██║   ██╔══██║██╔══██╗             
+██║     ███████║   ██║   ██║  ██║██████╔╝             
+╚═╝     ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═════╝              
+                                                                                             
+-------------------------------------------------------------------------
+"
+
+# IFS=\" read -r _ vUUID _ vPARTUUID _ < <(blkid /dev/nvme0n1p4 -s UUID -s PARTUUID)
+# echo $vUUID 
+
+cat <<EOT >> /etc/fstab
+
+#Mount Normal Drives
+
+UUID=bd7b8781-f98f-45e3-8e5e-fee3d9fd8bbd   /media/Epsilon   btrfs   nofail                                                                       0 0 
+UUID=b1121d57-4180-4ad1-af4f-158af3b18883   /media/Gamma     btrfs   nofail                                                                       0 0 
+//192.168.2.10/Delta/                       /media/Delta     cifs    vers=2.0,credentials=/home/deuce/.local/.smbcredentials,iocharset=utf8,gid=1000,uid=1000,file_mode=0777,dir_mode=0777   0 0
+//192.168.2.10/Theta                        /media/Theta/    cifs    vers=2.0,credentials=/home/deuce/.local/.smbcredentials,iocharset=utf8,gid=1000,uid=1000,file_mode=0777,dir_mode=0777   0 0
+
+
+EOT
+cat /etc/fstab
+
+sudo mkdir /media
+cd /media
+sudo mkdir Delta Epsilon Gamma Theta
+sudo chown -R deuce:deuce Delta Epsilon Gamma Theta 
+cd ~/
+sudo mount -a
+echo "--------------------------------------"
+echo "--          Changed FSTAB            --"
+echo "--------------------------------------"
+
+
+sleep 3

@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../../.config/hypr"
+		},
+		{
+			"path": "../../.config/waybar"
+		}
+	]
+}
