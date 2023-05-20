@@ -1,5 +1,5 @@
 {
-  "include": "~/.config/waybar/configs/custom_modules/privacy_container",
+  "include": "~/.config/waybar.og/configs/custom_modules/modules",
   "custom/launcher": {
     "format": " 󪤆 ",
     "on-click": "~/.config/rofi/launchers/type-1/launcher.sh",

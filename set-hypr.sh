@@ -42,7 +42,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     ttf-jetbrains-mono-nerd ttf-icomoon-feather ttf-iosevka-nerd  \
     adobe-source-code-pro-fonts btop partitionmanager corectrl-git    \
     ckb-next webcord firefox-developer-edition brave foliate neofetch   \
-    vlc zsh zsh-autosuggestions baobab cifs utils ncdu ntfs-3g    \
+    vlc zsh zsh-autosuggestions baobab cifs-utils ncdu ntfs-3g    \
     ranger mpv tumbler youtube-dl nemo-fileroller nemo-terminal   \
     nemo-folder-icons nemo-chdir nemo-pdf-tools steam             \
     proton-ge-custom-bin lib32-vulkan-radeon etcher-bin glow      \
@@ -54,7 +54,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     timeshift-autosnap tiny-media-manager ttf-ms-fonts xdg-ninja \
     xdg-open xdg-utils hyprpaper wev arcolinux-grub-theme-vimix-git \
     net-tools trobrowser exa bat rofi-emoji hyprpicker gamescope \
-    vk-pro bottom 
+    vk-pro bottom xorg-xwayland slurp
 fi
 
 ### Copy Config Files ###

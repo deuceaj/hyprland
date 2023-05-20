@@ -1,0 +1,65 @@
+{
+    "include": "~/.config/waybar/configs/custom_modules/modules",
+    "layer": "top",
+    "output": "DVI-D-1",
+    "height": 22,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-bottom": 0,
+    "margin-right": 0,
+    "spacing": 0,
+    "modules-left": [
+      
+      "wlr/workspaces",
+      "custom/arrow-dec"   
+      
+    ],
+    "modules-center": [
+      "custom/left",
+      "custom/priv-cam",
+      "custom/priv-speaker",
+      "custom/priv-mic",
+      "custom/right"
+      
+    
+    ],
+    "modules-right": [    
+      "tray",    
+      "custom/dot-alt",
+      "clock"
+    ],
+    "wlr/workspaces": {
+      "format": "<b>{name}:</b> {icon}",
+      "format-icons": {
+        "1": "󰨞 ",
+        "2": " ",
+        "3": " ",
+        "4": " ",
+        "5": " ",
+        "6": " ",
+        "7": " ",
+        "8": " ",
+        "9": " ",
+        "10": " ",
+        "focused": "",
+        "default": ""
+      },
+      "persistent_workspaces": {
+        "6": ["DVI-D-1" ],
+        "7": ["DVI-D-1" ],
+        "8": ["DVI-D-1" ],
+        "9": ["DVI-D-1" ],
+        "10": ["DVI-D-1" ]       
+    },
+
+      "sort-by-number": true,
+      "on-click": "activate",
+      "show-empty": true,
+      "mark-content": true,
+      "on-scroll-up": "hyprctl dispatch workspace e+1",
+      "on-scroll-down": "hyprctl dispatch workspace e-1"
+    }
+}
+
+
+

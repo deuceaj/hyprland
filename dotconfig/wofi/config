@@ -1,0 +1,10 @@
+location=topleft
+show=drun
+width=900
+height=900
+always_parse_args=true
+show_all=true
+print_command=true
+layer=overlay
+insensitive=true
+prompt=
