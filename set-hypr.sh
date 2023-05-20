@@ -74,9 +74,9 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     cp -R ./dotconfig/swaylock ~/.config/
     cp -R ./dotconfig/waybar ~/.config/
     cp -R ./dotconfig/wlogout ~/.config/
-    cp -R ./dotlocal/bin ~/.config/
-    cp -R ./dotlocal/wallpapers ~/.config/
-    cp -R ./dotlocal/WorksSpaces ~/.config/
+    cp -R ./dotlocal/bin ~/.local/
+    cp -R ./dotlocal/wallpapers ~/.local/
+    cp -R ./dotlocal/WorksSpaces ~/.local/
     
 
     
